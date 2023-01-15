@@ -18,13 +18,15 @@ class Vaga
     {
         $this->data = date('Y-m-d H:i:s');
         
-        $obDatabase = new Database();
+        $obDatabase = new Database('vaga');
         $this->id = $obDatabase->insert([
             'titulo' => $this->titulo,
             'descricao' => $this->descicao,
             'ativo' => $this->ativo,
             'data' => $this->data
         ]);
+
+        return true;
     }
 }
 
