@@ -3,8 +3,8 @@
   <head> <!-- A tag <head> providencia informações gerais (metadados) sobre o documento, incluindo seu titulo e links para scripts e folhas de estilos -->
     <meta charset="utf-8"> <!-- O atributo 'charset' especifica qual a codificação de caracteres utilizada na página -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- a tag meta com o atributo 'viewport' junto ao atributo 'content' define o tamanho da janela de visualização da página -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <title>Vagas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> <!-- Carrega o Bootstrap via CDN (Rede de Entrega de Conteúdo) -->
+    <title>Vagas</title> <!--Define o titulo da página-->
   </head>
   <body class="bg-dark text-light"> 
 <div class="container">

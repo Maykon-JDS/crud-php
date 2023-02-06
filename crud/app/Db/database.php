@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Db;
+namespace App\Db; //Define o namespace
 
-use \PDO;
+use \PDO; 
 use \PDOException;
 
 class Database
 {
-    const HOST = 'localhost';
+    const HOST = 'localhost'; 
     const USER = 'root';
     const NAME = 'vagas';
     const PASS = '1234';
@@ -15,20 +15,20 @@ class Database
     private $table;
     private $connection;
 
-    private function setConnection()
+    private function setConnection() //Cria uma conexão com o banco de dados 
     {
-        try {
-            $this->connection = new PDO('mysql:host=' . self::HOST . ';dbname=' . self::NAME, self::USER, self::PASS);
+        try { //O try consegue recuperar erros que possam ocorrer no código fornecido em seu bloco.
+            $this->connection = new PDO('mysql:host=' . self::HOST . ';dbname=' . self::NAME, self::USER, self::PASS); //Instancia uma classe PDO
             $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        } catch (PDOException $e) {
+        } catch (PDOException $e) { //O catch por sua vez faz o tratamento dos erros que aconteceram.
             die('ERROR: ' . $e->getMessage());
         }
     }
 
-    public function __construct($table = null)
+    public function __construct($table = null) //Metodo construtor
     {
-        $this->table = $table;
-        $this->setConnection();
+        $this->table = $table; //Caso seja passado um parametro na instanciação será atribuido como nome da tabela a ser conectada
+        $this->setConnection(); //Chama o metodo responsavel por connectar ao banco 
     }
 
     public function execute($query, $params = []){
@@ -47,7 +47,7 @@ class Database
         
         $query = 'INSERT INTO ' .$this->table. ' ('.implode(',',$fields).') VALUES ('. implode(',', $binds).')';
         
-        $this->execute($query, array_values($values));
+        $this->execute($query, array_values($values));  
         
         return $this->connection->lastInsertId();
     }

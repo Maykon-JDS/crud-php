@@ -1,3 +1,5 @@
+<!--Esse arquivo define o formulario para a criação e alteração de elementos do banco de dados -->
+
 <main>
     <section>
         <a href="index.php">
@@ -5,7 +7,7 @@
         </a>
     </section>
 
-    <h2 class="mt-3"><?=TITLE?></h2>
+    <h2 class="mt-3"><?=TITLE?></h2> <!-- A contantante 'TITLE' é definida no arquivo cadastrar.php e é utilizada para definir o titulo da página de forma dinamica -->
 
     <form method="post">
         <div class="form-group">
